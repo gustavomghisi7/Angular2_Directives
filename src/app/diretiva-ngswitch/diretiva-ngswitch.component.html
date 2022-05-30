@@ -21,8 +21,27 @@
     </div>
 </nav>
 
-<div class="container" [ngSwitch]="aba">
-    <p *ngSwitchCase="'home'">Modo Home ativado</p>
-    <p *ngSwitchCase="'link'">Modo Link ativado</p>
-    <p *ngSwitchDefault>Home</p>
-</div>
+<section>
+    <div class="container" [ngSwitch]="aba">
+        <p *ngSwitchCase="'home'">Modo Home ativado</p>
+        <p *ngSwitchCase="'link'">Modo Link ativado</p>
+        <p *ngSwitchDefault>Home</p>
+    </div>
+</section>
+
+<section>
+    <h5>Removendo o * e usando o template</h5>
+
+    <div class="container" [ngSwitch]="aba">
+        <ng-template [ngSwitchCase]="'home'">
+            <p>Modo Home ativado</p>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'link'">
+            <p *ngSwitchCase="'link'">Modo Link ativado</p>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'home'" ngSwitchDefault>
+            <p>Home</p>
+        </ng-template>
+    </div>
+</section>
+

@@ -32,3 +32,21 @@
         Não existem cursos para serem listados.
     </div>
 </section>
+
+<br><br>
+
+<section>
+    <h5>Removendo o * e usando o template</h5>
+
+    <div *ngIf="mostrarCursos">
+        
+    </div>
+
+    <ng-template [ngIf]="mostrarCursos" >
+        <div>Lista de Cursos primeiro tipo.</div>
+    </ng-template>
+
+    <div template="ngIf mostrarCursos">
+        Lista de cursos segundo tipo.
+    </div>
+</section>
