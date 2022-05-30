@@ -1,0 +1,24 @@
+<section>
+    <h5>NgClass</h5>
+    <h1>
+        <i  class="glyphicon"
+            [ngClass]="{
+                'bi-star' : !meuFavorito,
+                'star-fill' : meuFavorito
+            }"
+            (click)="onClick()"
+        ></i>
+    </h1>
+</section>
+
+
+<section>
+    <h1>
+        <h5>Outra alternativa de fazer o NgClass</h5>
+        <i  class="glyphicon"
+            [class.bi-star]="!meuFavorito"
+            [class.bi-star-fill]="meuFavorito"
+            (click)="onClick()"
+        ></i>
+    </h1>
+</section>
