@@ -17,7 +17,25 @@
 <p highlight [defaultColor]="'grey'" [highlightColor]="'red'">
     Texto com highlight com cores customizadas.
 </p>
--->
+
 <p [highlight]="'red'" [defaultColor]="'grey'">
     Texto com highlight com cores customizadas.
 </p>
+-->
+
+
+<section>
+    <h5>NgElse NO Angular 2+</h5>
+
+    <div *ngIf="mostrarCursos">
+        Lista de Cursos
+    </div>
+    <div *ngElse="mostrarCursos">
+        Não existem cursos para serem listados.
+    </div>
+
+    <br>
+    <button (click)="onMostrarCursos()">
+        Mostrar ou esconder curso
+    </button>
+</section>
